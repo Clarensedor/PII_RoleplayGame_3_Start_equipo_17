@@ -45,7 +45,7 @@ namespace Test.Library
         }
 
                 [Test]
-        public void AttackValue_Modified_By_AddingItem()      //Prueba que el metodo AddItem modifica el valor de defensa
+        public void AttackValue_Modified_By_AddingItem()      //Prueba que el metodo AddItem modifica el valor de ataque
         {
             Archer lego = new Archer ("Lego");      
             Staff staff = new Staff();
