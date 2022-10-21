@@ -26,6 +26,19 @@ namespace Program
             gimli.Cure();
 
             Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+
+            Saruman alberto = new Saruman("Alberto"); 
+            Console.WriteLine($"Alberto has ❤️ {alberto.Health}");
+
+            Console.WriteLine($"Gandalf has {alberto.Vp}");
+
+            alberto.ReceiveAttack(gandalf.AttackValue);
+            Console.WriteLine($"Alberto has ❤️ {alberto.Health}");
+
+            Console.WriteLine($"Gandalf has {alberto.Vp}");
+
+            Console.WriteLine($"Gandalf has {gandalf.Vp}");
+
         }
     }
 }
