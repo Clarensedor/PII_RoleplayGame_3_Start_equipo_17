@@ -5,19 +5,11 @@ namespace RoleplayGame
 {
     public abstract class Heroes : Character
     {
-        private int health = 100;
-
         private int vp;
-
-        private List<IItem> items = new List<IItem>();
-
         public Heroes(string name) : base(name)
         {
             this.vp=0;
-            this.AddItem(new Bow());
-            this.AddItem(new Helmet());
         }
-
         public void ReceiveAttack(Enemies whoAttack)
         {
             if (this.DefenseValue < whoAttack.AttackValue)
@@ -32,11 +24,10 @@ namespace RoleplayGame
             {
                 return this.vp;
             }
-            protected internal set
+            set
             {
                 this.vp = value;
             }
         }
-
     }
 }

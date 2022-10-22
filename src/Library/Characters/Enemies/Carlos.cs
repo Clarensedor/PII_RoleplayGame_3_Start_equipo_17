@@ -4,13 +4,11 @@ namespace RoleplayGame
 {
     public class Carlos : Enemies
     {
-        private int vp;
+        private int Vp;
 
-        public Carlos(string name) : base(name)
+        public Carlos(string name,int vp) : base(name,vp)
         {
-            this.vp = 10;
-            this.AddItem(new Staff());
-            this.AddItem(new Helmet());
+            this.Vp = vp;
         }
     }
 }

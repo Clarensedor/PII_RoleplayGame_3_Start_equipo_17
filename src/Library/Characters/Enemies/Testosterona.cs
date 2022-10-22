@@ -4,13 +4,12 @@ namespace RoleplayGame
 {
     public class Testosterona : Enemies
     {
-        private int vp;
+        private int Vp;
 
-        public Testosterona(string name) : base(name)
+        public Testosterona(string name,int vp) : base(name,vp)
         {
-            this.vp = 10;
-            this.AddItem(new Staff());
-            this.AddItem(new Helmet());
+            this.Vp = vp;
+            
         }
 
 

@@ -11,7 +11,7 @@ namespace Test.Library
         }
 
         [Test]
-        public void valor_ataque()
+        public void Agregar_Item()
         {
             const int expected = 15;
             Archer guillermo = new Archer ("Guillermo");
@@ -44,7 +44,7 @@ namespace Test.Library
             Assert.AreEqual(expectedDefenseValue, guillermo.DefenseValue);
         }
 
-                [Test]
+        [Test]
         public void AttackValue_Modified_By_AddingItem()      //Prueba que el metodo AddItem modifica el valor de defensa
         {
             Archer lego = new Archer ("Lego");      
@@ -52,8 +52,7 @@ namespace Test.Library
             lego.AddItem(staff);
             int expectedAttackValue = 115;
             Assert.AreEqual(expectedAttackValue, lego.AttackValue);
-        }
-        
 
+        }
     }
 }

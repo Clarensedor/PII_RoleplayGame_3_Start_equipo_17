@@ -5,17 +5,23 @@ namespace RoleplayGame
     public abstract class Enemies : Character
     {
         private int vp;
-        public Enemies(string name) : base(name)
+        public Enemies(string name, int vp) : base(name)
         {
+            this.Vp= vp;
         }
         public int Vp
         {
+
             get
             {
                 return this.vp;
             }
-            private set
+            set
             {
+                if(this.Health < 0)
+                {
+                    this.vp = 0;
+                }
                 this.vp = value;
             }
         }
@@ -28,17 +34,15 @@ namespace RoleplayGame
                 
                 if (this.CurrentHealth()<0)
                 {
-                    whoAttack.Vp+=this.vp;
+                    whoAttack.Vp+=this.Vp;
+                    this.Vp = 0;
                 }
                 return 0;
-                
             }
             else
             {
                 return Vp;
             }
-
-            
         }
     }
 

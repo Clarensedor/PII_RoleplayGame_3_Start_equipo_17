@@ -4,15 +4,13 @@ namespace RoleplayGame
 {
     public class Saruman : Enemies
     {
-        private int vp;
+        private int Vp;
 
-        public Saruman(string name) : base(name)
-        {
-            this.vp = 25;
-            this.AddItem(new Staff());
-            this.AddItem(new Helmet());
+        public Saruman(string name, int vp) : base(name,vp)
+        {                                       
+            this.Vp = vp;
+
+            // Esto esta mal, hay que editarlo para que le aparezca los VP
         }
-
-
     }
 }

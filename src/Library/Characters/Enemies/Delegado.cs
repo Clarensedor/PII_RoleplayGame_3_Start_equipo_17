@@ -3,16 +3,12 @@ namespace RoleplayGame
 {
     public class Delegado:Enemies
     {
-        public int vp{get; set;}
+        public int Vp{get; set;}
         public int health {get; set;}
 
-        public Delegado(string name) : base(name)
+        public Delegado(string name, int vp) : base(name,vp)
         {
-            this.vp = 50;
-            this.health=100;
-            this.AddItem(new Armor());
-            this.AddItem(new Axe());
-            this.AddItem(new Helmet());
+            this.Vp = vp;
         }
     }
 }
