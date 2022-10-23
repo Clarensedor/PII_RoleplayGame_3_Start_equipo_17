@@ -37,13 +37,16 @@ namespace Program
 
             Wizard gandalf = new Wizard("Gandalf");
             gandalf.AddItem(book);
+
+
             Saruman alberto = new Saruman("Alberto", 10); 
             
             Console.WriteLine($"Alberto has this health {alberto.Health}");
 
             Console.WriteLine($"Alberto has this VP points {alberto.Vp}");
 
-            alberto.ReceiveAttack(gandalf.AttackValue);
+            alberto.ReceiveAttack(gandalf);
+            
             Console.WriteLine($"Alberto has this health {alberto.Health}");
 
             Console.WriteLine($"Alberto has this VP {alberto.Vp}");
