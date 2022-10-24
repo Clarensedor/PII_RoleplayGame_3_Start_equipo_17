@@ -2,7 +2,7 @@ using RoleplayGame;
 
 namespace RoleplayGame
 {
-    public abstract class Enemies : Character
+    public class Enemies : Character
     {
         private int vp;
         public Enemies(string name, int vp) : base(name)
@@ -26,17 +26,17 @@ namespace RoleplayGame
             }
         }
 
+
         public int ReceiveAttack(Heroes whoAttack)
         {
             if (this.DefenseValue < whoAttack.AttackValue)
             {
                 this.Health -= whoAttack.AttackValue - this.DefenseValue;
                 
-                if (this.CurrentHealth()<0)
+                if (this.CurrentHealth()<=0)
                 {
                     whoAttack.Vp+=this.Vp;
-                    this.Vp = 0;
-                }
+             }
                 return 0;
             }
             else
@@ -45,5 +45,4 @@ namespace RoleplayGame
             }
         }
     }
-
 }
