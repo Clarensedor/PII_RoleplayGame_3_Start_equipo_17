@@ -47,7 +47,7 @@ namespace Program
             Saruman alberto = new Saruman("Alberto", 10); 
 
             
-            alberto.ReceiveAttack(gandalf);
+            alberto.ReceiveAttack(facundo);
 
             Console.WriteLine($"Alberto has this health {alberto.Health}");
 
