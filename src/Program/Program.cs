@@ -35,25 +35,33 @@ namespace Program
             book.AddSpell(new SpellOne());
             book.AddSpell(new SpellOne());
 
-            Knight facundo = new Knight("facundo");
-            Axe hacha = new Axe();
-            facundo.AddItem(hacha);
-            Console.WriteLine($"Ataque de facu{facundo.AttackValue}");
+            Sword escalibur = new Sword();
+            Axe escalibur2 = new Axe();
+            Sword escalibur3 = new Sword();
+            Sword escalibur4 = new Sword();
+            Axe escalibur5 = new Axe();
 
+            // preguntar si se puede en add item poder agregar, muchos items
+            // a la vez
 
-            Wizard gandalf = new Wizard("Gandalf");
-            gandalf.AddItem(book);
+            Knight arturo = new Knight("arturo");
+            arturo.AddItem(escalibur);
 
-            Saruman alberto = new Saruman("Alberto", 10); 
+            Saruman saruman = new Saruman("saruman", 30);
 
-            
-            alberto.ReceiveAttack(facundo);
+            Console.WriteLine($"La vida de Saruman es {saruman.Health}");
+            saruman.ReceiveAttack(arturo);
+            Console.WriteLine($"Ahora la vida de Saruman es {saruman.Health}");
+            Console.WriteLine($"Los Vp de Arturo son {arturo.Vp}");
 
-            Console.WriteLine($"Alberto has this health {alberto.Health}");
+            arturo.AddItem(escalibur2);
+            arturo.AddItem(escalibur3);
+            arturo.AddItem(escalibur4);
+            arturo.AddItem(escalibur5);
+            saruman.ReceiveAttack(arturo);
 
-            Console.WriteLine($"Alberto has this VP {alberto.Vp}");
-
-            Console.WriteLine($"Gandalf has this VP {gandalf.Vp}");
+            Console.WriteLine($"La vida de Saruman es {saruman.Health}");
+            Console.WriteLine($"Los Vp de Arturo son {arturo.Vp}");
 
         }
     }
